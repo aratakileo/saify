@@ -1,0 +1,54 @@
+include "Lib/random.sai"
+
+def print __Object
+output __Object endl
+enddef
+
+def cmd1
+
+enddef
+
+print 'Для помощи с командами введите -> help'
+
+set anchor1 __line__
+
+input line 'Введите команду -> '
+
+set statement line
+
+use statement
+== 'help'
+
+if statement goto 24
+goto 30
+output """Список команд:
+help - список команд
+random - сгенерировать случайное число от 1 до 100
+exit - закрыть программу
+"""
+goto anchor1
+
+set statement line
+== 'random'
+
+if statement goto 36
+goto 41
+
+use line
+randint 1 100
+print line
+goto anchor1
+
+set statement line
+== 'exit'
+
+if statement goto 47
+goto 49
+
+exit 'Завершение -> Успешно'
+
+output 'Команды \''
+output line
+output '\' не существует!' endl
+
+goto anchor1

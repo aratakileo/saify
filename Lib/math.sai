@@ -1,0 +1,14 @@
+# Базовый модуль "Lib/math.sai" (не полный - без функций)
+
+pyeval """
+
+import math
+pi = math.pi
+e = math.e
+infinity = math.inf
+nan = math.nan
+tau = math.tau
+
+del math
+
+"""

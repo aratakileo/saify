@@ -1,0 +1,12 @@
+class TokenType:
+    COMMENT = 'COMMENT'
+    INT = 'INT'
+    FLOAT = 'FLOAT'
+    STR = 'STR'
+    MULTI_LINE_STR = 'MULTI_LINE_STR'
+    ELLIPSIS = 'ELLIPSIS'
+    ID = 'ID'
+    OP = 'OP'
+    NEW_LINE = 'NEW_LINE'
+    MISMATCH = 'MISMATCH'
+    SKIP = 'SKIP'

@@ -1,0 +1,3 @@
+def HelloWorld
+eval 'output \'Hello World!\''
+enddef

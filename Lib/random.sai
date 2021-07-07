@@ -1,0 +1,49 @@
+# Базовый модуль "Lib/random.sai"
+
+def randint min max
+
+use min
+str min
+enduse
+
+use max
+str max
+enduse
+
+set script 'import random\nresult = random.randint('
+
+use script
++ min
++ ', '
++ max
++ ')\ndel random'
+enduse
+
+pyeval script
+
+return result
+enddef
+
+def randfloat min max
+
+use min
+str min
+enduse
+
+use max
+str max
+enduse
+
+set script 'import random\nresult = random.uniform('
+
+use script
++ min
++ ', '
++ max
++ ')\ndel random'
+enduse
+
+pyeval script
+
+return result
+enddef
