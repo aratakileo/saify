@@ -1,14 +1,11 @@
-if __name__ == '__main__':
-    from compiler import *
-    l = Compiler(True, 'main.sai')
-    print(l.run())
-    # l.run()
+from compiler import Compiler
 
-    # import os.path
-    #
-    # file = 'Lib/test.py'
-    #
-    # with open(file, 'r', encoding='utf-8') as f:
-    #     _file = f.read()
-    #
-    # exec(compile(_file, file, 'exec'))
+
+compiler = Compiler(
+   True,       # True - is file path, False - is code witten on Saify
+   'main.sai'  # file with our code written on Saify
+
+               # if you change first parameter to False then
+               # you can insert code written on Saify instead file path
+)
+compiler.run()
