@@ -4,35 +4,31 @@ def print __Object
 output __Object endl
 enddef
 
-def cmd1
-
-enddef
-
-print 'Для помощи с командами введите -> help'
+print 'For help insert -> help'
 
 set anchor1 __line__
 
-input line 'Введите команду -> '
+input line 'Insert command -> '
 
 set statement line
 
 use statement
 == 'help'
 
-if statement goto 24
-goto 30
-output """Список команд:
-help - список команд
-random - сгенерировать случайное число от 1 до 100
-exit - закрыть программу
+if statement goto 20
+goto 27
+output """Commands list:
+help - commamds list
+random - generate random number from 1 to 100
+exit - close program
 """
 goto anchor1
 
 set statement line
 == 'random'
 
-if statement goto 36
-goto 41
+if statement goto 33
+goto 38
 
 use line
 randint 1 100
@@ -42,13 +38,13 @@ goto anchor1
 set statement line
 == 'exit'
 
-if statement goto 47
-goto 49
+if statement goto 44
+goto 46
 
-exit 'Завершение -> Успешно'
+exit 'Finishing -> Successful'
 
-output 'Команды \''
+output 'Command \''
 output line
-output '\' не существует!' endl
+output '\' is doesn\'t exists!' endl
 
 goto anchor1
