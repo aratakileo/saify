@@ -39,8 +39,8 @@ set statement line
 use statement
 == 'help'
 
-if statement goto 24
-goto 30
+if statement goto 20
+goto 27
 output """Commands list:
 help - commamds list
 random - generate random number from 1 to 100
@@ -51,8 +51,8 @@ goto anchor1
 set statement line
 == 'random'
 
-if statement goto 36
-goto 41
+if statement goto 33
+goto 38
 
 use line
 randint 1 100
@@ -62,8 +62,8 @@ goto anchor1
 set statement line
 == 'exit'
 
-if statement goto 47
-goto 49
+if statement goto 44
+goto 46
 
 exit 'Finishing -> Successful'
 
