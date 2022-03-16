@@ -162,8 +162,14 @@ enddef
 
 Example
 ```py
-def prt arg
-output arg
+def print arg
+output arg endl
+enddef
+```
+or
+```py
+def show arg1 arg2
+output arg1 arg2 endl
 enddef
 ```
 > [Navigation]
