@@ -1,4 +1,4 @@
-# Базовый модуль "Lib/random.sai"
+# Base module "Lib/random.sai"
 
 def randint min max
 
