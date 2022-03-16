@@ -1,4 +1,4 @@
-# Базовый модуль "Lib/math.sai" (не полный - без функций)
+# Base module "Lib/math.sai" (without functions)
 
 pyeval """
 
