@@ -15,7 +15,7 @@ compiler = Compiler(
    'main.sai'  # file with our code written on Saify
 
                # if you change first parameter to False then
-               # you can to insert code written on Saify instead file path
+               # you can insert code written on Saify instead file path
 )
 compiler.run()
 ```
