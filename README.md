@@ -2,6 +2,8 @@
 
 Interprete programming language, working by `Python`. Syntax similar to `SQL` + `Assembler`
 
+> [Syntax](#syntax)
+
 ### Run code (Example)
 All files with code written in this language have the extension `.sai`.
 
@@ -73,3 +75,95 @@ output '\' is doesn\'t exists!' endl
 
 goto anchor1
 ```
+
+# Syntax
+### Navigation
+[navigation]: #navigation
+
+- [Types](#types)
+   - [Boolean](#boolean)
+   - [String](#string)
+   - [Number](#number)
+   - [Ellipsis](#ellipsis)
+   - [None](#none)
+- [Initialize variable](#initialize-variable)
+- [Setting variable's value](#setting-variables-value)
+- [Initialize function](#initialize-function)
+
+### Types
+##### Boolean
+```py
+True
+```
+```py
+False
+```
+##### String
+```py
+'Hello World!'
+```
+```py
+"Hello World!"
+```
+```py
+'''Hello World!'''
+```
+```py
+"""Hello World!"""
+```
+##### Number
+```py
+123
+```
+```py
+123.4
+```
+##### Ellipsis
+```py
+...
+```
+##### None
+```py
+None
+```
+> [Navigation]
+
+### Initialize variable
+Structure
+```sql
+set <name> <value>
+```
+
+Example
+```sql
+set variable 123
+```
+> [Navigation]
+
+### Setting variable's value
+```sql
+set variable 456
+```
+or
+```sql
+use variable
+456
+enduse
+```
+> [Navigation]
+
+### Initialize function
+Structure
+```py
+def <name> (<argument>,)*
+<code>
+enddef
+```
+
+Example
+```py
+def prt arg
+output arg
+enddef
+```
+> [Navigation]
