@@ -93,7 +93,9 @@ goto anchor1
 - [Functions](#functions)
    - [Initialize](#initialize-1)
    - [Call](#call)
-   - [Return value](#return-value)
+   - [Keyword `return`](#keyword-return)
+   - [Default functions](#default-functions)
+- [Keyword `goto`](#keyword-goto)
 
 ### Types
 ##### Boolean
@@ -203,7 +205,7 @@ or
 show "Hello" "World!"  # Output: Hello World!
 ```
 
-#### Return value
+#### Keyword `return`
 Structure
 ```py
 return <value>
@@ -228,4 +230,27 @@ enduse
 output num endl  # Output: 2
 ```
 
+#### Default functions
+`output` - print the specified values (structure `output <value>*`)
+
+`input` - enter a value from the keyboard (structure `input <variable-name> <value (to print)>?`)
+
+`exit` - exiting the program with an indication of the reason (structure `exit <value (reason)>?`)
+
+`eval` - execute the `Saify` code passed as a string value (structure `eval <value (Saify code)>`)
+
+`pyeval` - execute the `Python` code passed as a string value (structure `eval <value (Python code)>`)
+
+> [Navigation]
+
+### Keyword `goto`
+This keyword allows the program to proceed to code execution, starting from the specified line.
+Structure
+```py
+goto <value>
+```
+Example
+```py
+goto 23
+```
 > [Navigation]
