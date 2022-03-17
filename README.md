@@ -155,7 +155,7 @@ enduse
 ### Initialize function
 Structure
 ```py
-def <name> (<argument>,)*
+def <name> <argument>*
 <code>
 enddef
 ```
