@@ -95,7 +95,8 @@ goto anchor1
    - [Call](#call)
    - [Keyword `return`](#keyword-return)
    - [Default functions](#default-functions)
-- [Keyword `goto`](#keyword-goto)
+- [Other](#other)
+   - [Keyword `goto`](#keyword-goto)
 
 ### Types
 ##### Boolean
@@ -112,6 +113,7 @@ False
 ```py
 "Hello World!"
 ```
+Also multiline string
 ```py
 '''Hello World!'''
 ```
@@ -243,7 +245,8 @@ output num endl  # Output: 2
 
 > [Navigation]
 
-### Keyword `goto`
+# Other
+#### Keyword `goto`
 This keyword allows the program to proceed to code execution, starting from the specified line.
 Structure
 ```py
