@@ -96,6 +96,8 @@ goto anchor1
    - [Keyword `return`](#keyword-return)
    - [Default functions](#default-functions)
 - [Other](#other)
+   - [If statement](#if-statement)
+   - [Keyword `include`](#keyword-include)
    - [Keyword `goto`](#keyword-goto)
 
 ### Types
@@ -233,7 +235,7 @@ output num endl  # Output: 2
 ```
 
 #### Default functions
-`output` - print the specified values (structure `output <value>*`)
+`output` - print the specified values (structure `output <value>*` (any number of arguments))
 
 `input` - enter a value from the keyboard (structure `input <variable-name> <value (to print)>?`)
 
@@ -246,6 +248,68 @@ output num endl  # Output: 2
 > [Navigation]
 
 # Other
+#### If statement
+Structure
+```py
+if <value> <code>
+```
+Example
+```py
+set val 2
+use val
++ 2
+== 4
+
+if val output "2 + 2 = 4"
+
+2
++ 2
+== 5
+
+if val output "2 + 2 = 5"
+```
+or
+```py
+set name ''
+input name 'What is your name? '
+
+set statement False
+use statement
+!= ''
+enduse
+
+set IF __line__
+use IF
++ 15
+enduse
+
+if statement goto IF
+
+# ELSE
+output "Hi!" endl
+
+set ELSE __line__
+use ELSE
++ 9
+enduse
+goto ELSE
+
+# IF
+output "Hi, " name " !" endl
+
+# END
+```
+
+#### Keyword `include`
+Allows you to connect modules written in `Saify` or `Python`.
+Structure
+```py
+include <str>
+```
+Example
+```py
+include "Lib/math.sai"
+```
 #### Keyword `goto`
 This keyword allows the program to proceed to code execution, starting from the specified line.
 Structure
