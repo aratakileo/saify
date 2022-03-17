@@ -90,15 +90,19 @@ goto anchor1
    - [Initialize](#initialize)
    - [Setting value](#setting-value)
    - [Default variables](#default-variables)
+- [`use`/`enduse`](#use-enduse)
+   - [`use`/`enduse`](#use-enduse-1)
+   - [Operators](#operators)
 - [Functions](#functions)
    - [Initialize](#initialize-1)
    - [Call](#call)
    - [Keyword `return`](#keyword-return)
    - [Default functions](#default-functions)
 - [Other](#other)
-   - [If statement](#if-statement)
-   - [Keyword `include`](#keyword-include)
-   - [Keyword `goto`](#keyword-goto)
+  - [If statement](#if-statement)
+  - [Keyword `include`](#keyword-include)
+  - [Keyword `goto`](#keyword-goto)
+  - [Keyword `del`](#keyword-del)
 
 ### Types
 ##### Boolean
@@ -170,6 +174,53 @@ enduse
 `__name__` - get compilation file name
 
 `endl` - `'\n'`
+
+> [Navigation]
+
+### `use`/`enduse`
+#### `use`/`enduse`
+This construction allows you to interact with the value of a variable (only one variable can be interacted with at a time).
+Structure
+```py
+use <variable>
+<code>
+enduse
+```
+Example
+```py
+set val 1
+
+use val
++ 1
+* 2
+** 2
+- 4
+/ 3
+enduse
+
+output val endl  # output: 4
+```
+#### Operators
+| Operator | Description              |
+|----------|--------------------------|
+| `+`      | Add                      |
+| `-`      | Minus                    |
+| `**`     | Exponentiation           |
+| `*`      | Multiplication           |
+| `/`      | Division                 |
+| `//`     | Integer division         |
+| `%`      | Mod                      |
+| `==`     | Equals                   |
+| `!=`     | Not equals               |
+| `<`      | Less than                |
+| `>`      | Greater than             |
+| `<=`     | Less than or equal to    |
+| `>=`     | Greater than or equal to |
+| `and`    | ...                      |
+| `or`     | ...                      |
+| `not`    | ...                      |
+| `in`     | ...                      |
+| `is`     | ...                      |
 
 > [Navigation]
 
@@ -319,5 +370,20 @@ goto <value>
 Example
 ```py
 goto 23
+```
+
+#### Keyword `del`
+Allows you to delete variable.
+Structure
+```py
+del <variable>
+```
+Example
+```py
+set val 12
+
+del val
+
+output val endl  # error
 ```
 > [Navigation]
