@@ -260,13 +260,13 @@ use val
 + 2
 == 4
 
-if val output "2 + 2 = 4"
+if val output "2 + 2 = 4" endl
 
 2
 + 2
 == 5
 
-if val output "2 + 2 = 5"
+if val output "2 + 2 = 5" endl
 ```
 or
 ```py
