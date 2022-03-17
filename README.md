@@ -86,9 +86,14 @@ goto anchor1
    - [Number](#number)
    - [Ellipsis](#ellipsis)
    - [None](#none)
-- [Initialize variable](#initialize-variable)
-- [Setting variable's value](#setting-variables-value)
-- [Initialize function](#initialize-function)
+- [Variables](#variables)
+   - [Initialize](#initialize)
+   - [Setting value](#setting-value)
+   - [Default variables](#default-variables)
+- [Functions](#functions)
+   - [Initialize](#initialize-1)
+   - [Call](#call)
+   - [Return value](#return-value)
 
 ### Types
 ##### Boolean
@@ -128,7 +133,8 @@ None
 ```
 > [Navigation]
 
-### Initialize variable
+### Variables
+#### Initialize
 Structure
 ```sql
 set <name> <value>
@@ -138,9 +144,8 @@ Example
 ```sql
 set variable 123
 ```
-> [Navigation]
 
-### Setting variable's value
+#### Setting value
 ```sql
 set variable 456
 ```
@@ -150,9 +155,20 @@ use variable
 456
 enduse
 ```
+
+#### Default variables
+`__line__` - get current line number
+
+`__file__` - get file path
+
+`__name__` - get compilation file name
+
+`endl` - `'\n'`
+
 > [Navigation]
 
-### Initialize function
+### Functions
+#### Initialize
 Structure
 ```py
 def <name> <argument>*
@@ -169,7 +185,47 @@ enddef
 or
 ```py
 def show arg1 arg2
-output arg1 arg2 endl
+output arg1 " " arg2 endl
 enddef
 ```
+
+#### Call
+Structure
+```py
+<name> <argument>*
+```
+Example
+```py
+print "Hello World!"
+```
+or
+```py
+show "Hello" "World!"  # Output: Hello World!
+```
+
+#### Return value
+Structure
+```py
+return <value>
+```
+Example
+```py
+def add left right
+
+use left
++ right
+enduse
+
+return left
+enddef
+
+set num 0
+
+use num
+add 1 1
+enduse
+
+output num endl  # Output: 2
+```
+
 > [Navigation]
