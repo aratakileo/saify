@@ -2,7 +2,8 @@
 
 Interprete programming language, working by `Python`. Syntax similar to `SQL` + `Assembler`
 
-> [Syntax](#syntax)
+- [Syntax](#syntax)
+- [When were last source code changes](#when-were-last-source-code-changes)
 
 ### Run code (Example)
 All files with code written in this language have the extension `.sai`.
@@ -76,7 +77,7 @@ output '\' is doesn\'t exists!' endl
 goto anchor1
 ```
 
-# Syntax
+## Syntax
 ### Navigation
 [navigation]: #navigation
 
@@ -387,3 +388,6 @@ del val
 output val endl  # error
 ```
 > [Navigation]
+
+## When were last source code changes
+`9 January 2021`
